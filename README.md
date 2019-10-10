@@ -1,6 +1,8 @@
 # Productivity-Scripts-Autohotkey-Windows
 Autohotkey scripts to make you more productive when using Windows.
 
-## "keyboard_as_mouse.ahk" script
-Working with touchpad of laptop is not quite productive as only one hand is used for both moving cursor and clicking left and right button.  
-This script replaces 'Win' key as mouse left click and 'Alt' key as mouse right click for better productivity.
+##Mission is to replace the need of mouse! making keyboard faster then mouse!!
+- 'Win' key is now mouse left click
+
+## Run "mouseless.ahk" script on Autostart
+put script_autorun_startup.vbs @ folder C:\Users\1gour\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
