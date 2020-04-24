@@ -3,6 +3,7 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+; alt+Q switches windows when file explorer has tabs
 #If WinActive("ahk_exe Explorer.EXE")
 $!Q::    ; Next window
 WinGetClass, ActiveClass, A

@@ -53,8 +53,16 @@ Return
 ; WIN key as mouse left click *****************************************
 LWin::LButton
 
+; capslock as ctrl+alt+tab i.e. show window switcher ***************************
+   ;enable capslock with shift+capslock 
++CapsLock::CapsLock
+   ; capslock is ctrl+alt+tab
+CapsLock::
+Send, ^!{Tab}
+return
+
 ; ctrl+alt is Alttab *****************************************
-LControl & RAlt::AltTab
+; LControl & RAlt::AltTab
 ; LShift & RAlt::AltTabAndMenu
 
 ; RCTRL as Win key ******************************************************
@@ -74,7 +82,7 @@ if RegExMatch(Clipboard, "^(https?://|www\.)[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(/\S*
 {
     Run % Clipboard
 }
-else
+else  
 {
     ; Modify some characters that screw up the URL
     ; RFC 3986 section 2.2 Reserved Characters (January 2005):  !*'();:@&=+$,/?#[]
