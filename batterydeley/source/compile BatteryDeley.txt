@@ -1,0 +1,44 @@
+BatteryDeley version 1.1 (12/31/2009)
+
+TO COMPILE BATTERY DELEY:
+
+1. Install Compile_AHK_II
+
+      Download program Compile_AHK II and install.
+      Download from:
+      http://www.autohotkey.net/~ladiko/Compile_AHK/Compile_AHK_Setup.exe
+      The related forum post is: Compile_AHK II - for those who compile!
+      http://www.autohotkey.com/forum/viewtopic.php?t=22975
+
+
+2. Right-click on BatteryDeley.ahk, select "Compile with options"
+
+3. Select the 'Icons' tab
+   (If the text is German, and you're not fluent in German, select the 'Sprache' combo box on the far right of the tabs and choose "en-us")
+
+4. Setup as in image "CompileBatteryDeley.gif"
+
+5. Click 'Compile'
+
+6. Move BatteryDeley.exe and following images to where you want it (e.g. "C:\Program Files\BatteryDeley\")
+      ClipartConnection_3700840.thm.jpg
+      ClipartConnection_3775464_thm.jpg
+      ClipartConnection_3775471_thm.jpg
+      ClipartConnection_3861328_thm.jpg
+      ClipartConnection_3890038_thm.jpg
+
+7. Run BatteryDeley.exe
+   File "BatteryDeley.ini" will be created since it doesn't already exist.
+
+
+REFERENCES:
+Tutorial: How to compile .AHK files include your own icons
+http://www.autohotkey.com/forum/viewtopic.php?p=250327#250327
+
+CompileBatteryDeley.gif
+readme.txt (for BatteryDeley)
+
+
+
+—David Deley
+http://members.cox.net/deleyd/
