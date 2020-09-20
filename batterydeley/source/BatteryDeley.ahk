@@ -26,8 +26,17 @@
 ;  colon-equal operator (:=) to store numbers, quoted strings
 ;  equal sign operator (=) to assign unquoted literal strings or variables enclosed in percent signs.
 
-;#NoEnv          ; Recommended for performance and compatibility with future AutoHotkey releases.
+; run script as admin (reload if not as admin) 
+if not A_IsAdmin
+{
+   Run *RunAs "%A_ScriptFullPath%"  ; Requires v1.0.92.01+
+   ExitApp
+}
+
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance force
 
 if A_IsCompiled
@@ -108,27 +117,27 @@ loop,%NumChargeAlerts%
 ;CHECK AC LINE STATUS
 ;do this last so it supersedes low battery alert
 ;MsgBox, 0, BatteryDeley, checking ac line status`noldacLineStatus=%oldacLineStatus%`nnew acLineStatus=%acLineStatus%,
-If (acLineStatus<>oldacLineStatus)
-{
-  ;DID WE GET PLUGGED IN?
-  If acLineStatus = 1   ;  acLineStatus = Online
-  {
-    alertms  := PLUGINms
-    alertimg := PLUGINimg
-    alertcmd := PLUGINcmd
-    MsgRight = Plugged In`n`nBattery`n%BatteryLifePercent%`%
-    Do_Alert := TRUE
-  }
-  ;DID WE GET UNPLUGGED?
-  Else If acLineStatus = 0   ;  acLineStatus = Offline
-  {
-    alertms  := UNPLUGms
-    alertimg := UNPLUGimg
-    alertcmd := UNPLUGcmd
-    MsgRight = Unplugged`n`nBattery`n%BatteryLifePercent%`%
-    Do_Alert := TRUE
-  }
-}
+; If (acLineStatus<>oldacLineStatus)
+; {
+;   ;DID WE GET PLUGGED IN?
+;   If acLineStatus = 1   ;  acLineStatus = Online
+;   {
+;     alertms  := PLUGINms
+;     alertimg := PLUGINimg
+;     alertcmd := PLUGINcmd
+;     MsgRight = Plugged In`n`nBattery`n%BatteryLifePercent%`%
+;     Do_Alert := TRUE
+;   }
+;   ;DID WE GET UNPLUGGED?
+;   Else If acLineStatus = 0   ;  acLineStatus = Offline
+;   {
+;     alertms  := UNPLUGms
+;     alertimg := UNPLUGimg
+;     alertcmd := UNPLUGcmd
+;     MsgRight = Unplugged`n`nBattery`n%BatteryLifePercent%`%
+;     Do_Alert := TRUE
+;   }
+; }
 If ( Do_Alert )
 {
   GoSub DOALERT
