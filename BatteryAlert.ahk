@@ -54,7 +54,7 @@ if (batteryLifePercent > 99){ ;Yes.
 }
 
 ;Is the battery charged higher than 99%
-if (batteryLifePercent < 35){ ;Yes. 
+if (batteryLifePercent < 32){ ;Yes. 
 
 	if (acLineStatus == 0){ ;Only notify me once
 		;Format the message box
@@ -63,7 +63,7 @@ if (batteryLifePercent < 35){ ;Yes.
 		SoundBeep, 1500, 200
 		; MsgBox, %output% ;Notify me.
 		popupmfk(title,"Plug-in Charger", 7000, , 1)
-		sleepTime := 200
+		sleepTime := 300
 	}
 	else{
 		sleepTime := 60
