@@ -85,9 +85,9 @@ if ErrorLevel  ; ClipWait timed out.
 {
     return
 }
-if RegExMatch(Clipboard, "^(https?://|www\.)[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(/\S*)?$")
+if RegExMatch(Clipboard, "[^ ]*\.[^ ]*")
 {
-    Run % Clipboard
+    Run "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" %Clipboard%
 }
 else  
 {
