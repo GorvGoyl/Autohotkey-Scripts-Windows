@@ -85,7 +85,7 @@ if ErrorLevel  ; ClipWait timed out.
 {
     return
 }
-if RegExMatch(Clipboard, "[^ ]*\.[^ ]*")
+if RegExMatch(Clipboard, "^[^ ]*\.[^ ]*$")
 {
     Run "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" %Clipboard%
 }
