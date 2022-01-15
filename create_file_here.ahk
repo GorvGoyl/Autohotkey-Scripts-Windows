@@ -11,7 +11,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance force
 
 
-; ctrl+shift+m: create empty text file in file explorer
+; ctrl+shift+m: create empty text file (NewFile.txt) at current folder location in file explorer
 
 #IfWinActive ahk_class CabinetWClass
 ^+m::

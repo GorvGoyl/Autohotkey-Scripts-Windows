@@ -1,45 +1,61 @@
-# Productivity-Autohotkey-Scripts--Windows
+# Useful AutoHotkey Scripts for Windows
 
-Autohotkey scripts to make you more productive when using Windows.
+https://www.autohotkey.com
 
-## Bookmarks
+## How to run script
 
-- http://daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm
-- https://www.autohotkey.com/docs/AutoHotkey.htm
+- Download and install main program (one-time step) https://www.autohotkey.com
+- Download a script (`*.ahk`) or copy paste script content in a text file and then rename it with `.ahk` extension e.g. `my-script.ahk`
+- Right-click -> `Run script`.  
+  You can also run scripts by double-click, or do right-click ->`Open with` -> `AutoHotkey`
+- Bonus: you can right-click and `Compile script` to make it as a standalone `*.exe` program which would run without needing to install AutoHotkey first.
 
-## Run script at statup
+### Run script at startup
 
-1.  open startup folder
-    `Win+R` then `shell:startup`
-    or
-    `C:\Users\1gour\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
+Method 1:
 
-then paste script as shortcut
+- Open startup folder: open `Run` window by `Win+R` and then write `shell:startup` and enter.
+- It'll open explorer at something like this path: `C:\Users\{username}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
+- Copy script (`*.ahk`) -> go to that `Startup` folder -> right-click and select `Paste shortcut`.
 
 OR
 
-2.  put `script_autorun_startup.vbs` at startup folder
+Method 2:
+
+- Put `script_autorun_startup.vbs` at startup folder. Make sure to put correct path of your ahk scripts inside that file first.
 
 ### Run script as Admin
 
-1.
+Put it at the beginning of script:
 
 ```
 ; check if it is running as Admin, if not reload as Admin. put at top
 if not A_IsAdmin
 {
-   Run *RunAs "%A_ScriptFullPath%"  ; Requires v1.0.92.01+
+   Run *RunAs "%A_ScriptFullPath%"
    ExitApp
 }
 ```
 
 OR
 
-2.  Check "run this program as administrator" in:
+Check `Run this program as administrator` in:
 
 > autohothey.exe > properties > compatability > settings
 
-### Common things often found at the beginning of autohotkey scripts
+## Docs
+
+- Official docs  
+  https://www.autohotkey.com/docs/AutoHotkey.htm
+
+- AutoHotkey Expression Examples  
+  http://daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm
+
+### Keys and their symbols
+
+- https://www.autohotkey.com/docs/Hotkeys.htm#Symbols
+
+### Common things often found at the beginning of AutoHotkey scripts
 
 ```
 #NoTrayIcon              ;if you don't want a tray icon for this AutoHotkey program.
@@ -57,3 +73,8 @@ SetWorkingDir, %A_ScriptDir%  ;Set default directory to where this script file i
 LogFile := "MyLog.txt"
 FileAppend, This is a message`n, %LogFile%  ;Note the trailing (`n) to start a new line. This could instead be a leading (`n) if you want. (Note %% because it's expecting and unquoted string)
 ```
+
+## Community
+
+- https://www.reddit.com/r/AutoHotkey/
+- https://www.autohotkey.com/boards/

@@ -57,3 +57,34 @@ Else If (A_ThisMenuItemPos = 7)
 PutText(TempText)
 Return
 
+; Handy function.
+; Copies the selected text to a variable while preserving the clipboard.
+GetText(ByRef MyText = "")
+{
+   SavedClip := ClipboardAll
+   Clipboard =
+   Send ^c
+   ClipWait 0.5
+   If ERRORLEVEL
+   {
+      Clipboard := SavedClip
+      MyText =
+      Return
+   }
+   MyText := Clipboard
+   Clipboard := SavedClip
+   Return MyText
+}
+
+; Pastes text from a variable while preserving the clipboard.
+PutText(MyText)
+{
+   SavedClip := ClipboardAll 
+   Clipboard =              ; For better compatability
+   Sleep 20                 ; with Clipboard History
+   Clipboard := MyText
+   Send ^v
+   Sleep 100
+   Clipboard := SavedClip
+   Return
+}
