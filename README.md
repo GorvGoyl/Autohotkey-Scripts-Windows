@@ -10,6 +10,8 @@ https://www.autohotkey.com
   You can also run scripts by double-click, or do right-click ->`Open with` -> `AutoHotkey`
 - Bonus: you can right-click and `Compile script` to make it as a standalone `*.exe` program which would run without needing to install AutoHotkey first.
 
+_scripts inside /drafts folder are not tested properly and might not work. Rest of the scripts should work fine._
+
 ### Run script at startup
 
 Method 1:
