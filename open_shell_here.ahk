@@ -1,4 +1,7 @@
-﻿; run script as admin (reload if not as admin) 
+﻿; ctrl+shift+p: open powershell at current folder location in file explorer
+
+
+; run script as admin (reload if not as admin) 
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"  ; Requires v1.0.92.01+
@@ -10,7 +13,6 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance force
 
-; ctrl+shift+p: open powershell at current folder location in file explorer
 
 #IfWinActive ahk_class CabinetWClass
 ^+p::

@@ -1,4 +1,8 @@
-﻿; run script as admin (reload if not as admin) 
+﻿; ctrl+capslock to show text case change menu 
+
+
+; run script as admin (reload if not as admin) 
+
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"  ; Requires v1.0.92.01+
@@ -12,7 +16,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force
 SetTitleMatchMode 2
 
-; ctrl+capslock to case change menu *****************************************
 GroupAdd All
 
 Menu Case, Add, &UPPERCASE, CCase

@@ -1,4 +1,3 @@
-;PushToShow.ahk
 ; Only shows the taskbar when the Windows key is pushed
 ;Skrommel @ 2008
 

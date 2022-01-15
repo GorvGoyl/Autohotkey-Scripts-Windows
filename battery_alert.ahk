@@ -3,7 +3,7 @@
 ; When the battery is charged, a notification
 ; will appear to tell the user to remove the charger
 ;
-; When the battery is below 10%, a notification
+; When the battery is below 30%, a notification
 ; will appear to tell the user to plug in the charger
 
 ; run script as admin (reload if not as admin) 

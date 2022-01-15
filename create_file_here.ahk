@@ -1,4 +1,6 @@
-﻿; run script as admin (reload if not as admin) 
+﻿; ctrl+shift+m: create empty text file (NewFile.txt) at current folder location in file explorer
+
+; run script as admin (reload if not as admin) 
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"  ; Requires v1.0.92.01+
@@ -9,9 +11,6 @@ if not A_IsAdmin
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance force
-
-
-; ctrl+shift+m: create empty text file (NewFile.txt) at current folder location in file explorer
 
 #IfWinActive ahk_class CabinetWClass
 ^+m::

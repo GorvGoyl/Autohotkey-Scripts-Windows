@@ -1,4 +1,8 @@
-﻿; run script as admin (reload if not as admin) 
+﻿
+; capslock as ctrl+alt+tab i.e. show window switcher
+; enable/disable capslock with shift+capslock
+
+; run script as admin (reload if not as admin) 
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"  ; Requires v1.0.92.01+
@@ -12,11 +16,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force
 SetTitleMatchMode 2
 
-; capslock as ctrl+alt+tab i.e. show window switcher ***************************
-; enable capslock with shift+capslock
+
 +CapsLock::CapsLock
 
-; capslock is ctrl+alt+tab
 CapsLock::
 Send, ^!{Tab}
 return

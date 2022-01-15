@@ -1,4 +1,7 @@
-﻿; run script as admin (reload if not as admin) 
+﻿; alt+g : open highlighted text in browser and do google search / visit site (if it's url)
+
+
+; run script as admin (reload if not as admin) 
 if not A_IsAdmin
 {
    Run *RunAs "%A_ScriptFullPath%"  ; Requires v1.0.92.01+
@@ -13,7 +16,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 SetTitleMatchMode 2
 
 
-; open highlighted text in browser and do google search / visit site (if it's url): alt+g *****************************************
 !g::
 MyClip := ClipboardAll
 Clipboard = ; empty the clipboard

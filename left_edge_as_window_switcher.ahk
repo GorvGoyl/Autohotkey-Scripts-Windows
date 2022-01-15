@@ -1,5 +1,4 @@
-;AltEdge.ahk
-; Sends Alt-Tab when the mouse is on the left edge of the screen.
+; Sends Alt-Tab (Window switcher) when the mouse is on the left edge of the screen.
 ; Keep it there to tab through the other windows. 
 ;Skrommel @ 2008
 

@@ -41,7 +41,7 @@ OR
 
 Check `Run this program as administrator` in:
 
-> autohothey.exe > properties > compatability > settings
+> autohothey.exe > properties > compatibility > settings
 
 ## Docs
 
