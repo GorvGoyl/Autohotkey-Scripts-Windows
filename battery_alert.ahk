@@ -20,8 +20,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force
 SetTitleMatchMode 2
 
-percentage := "%"
+; set desired low battery percentage to get alert
+lowBatteryPercentage := 90
+;
+
 sleepTime := 60
+chargedPercentage := 99
+percentage := "%"
 
 Loop{ ;Loop forever
 
@@ -33,7 +38,7 @@ acLineStatus:=ReadInteger(&powerstatus,0)
 batteryLifePercent:=ReadInteger(&powerstatus,2)
 
 ;Is the battery charged higher than 99%
-if (batteryLifePercent > 99){ ;Yes. 
+if (batteryLifePercent > chargedPercentage){ ;Yes. 
 
 	if (acLineStatus == 1){ ;Only notify me once
 		if (batteryLifePercent == 255){
@@ -53,8 +58,7 @@ if (batteryLifePercent > 99){ ;Yes.
 	}
 }
 
-;Is the battery charged higher than 99%
-if (batteryLifePercent < 32){ ;Yes. 
+if (batteryLifePercent < lowBatteryPercentage){ ;Yes. 
 
 	if (acLineStatus == 0){ ;Only notify me once
 		;Format the message box

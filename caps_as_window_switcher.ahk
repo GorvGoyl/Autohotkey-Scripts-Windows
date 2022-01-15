@@ -12,8 +12,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force
 SetTitleMatchMode 2
 
-; WIN key as mouse left click *****************************************
-LWin::LButton
+; capslock as ctrl+alt+tab i.e. show window switcher ***************************
+; enable capslock with shift+capslock
++CapsLock::CapsLock
 
-; RCTRL as Win key ******************************************************
-RCtrl::LWin
+; capslock is ctrl+alt+tab
+CapsLock::
+Send, ^!{Tab}
+return

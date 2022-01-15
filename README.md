@@ -3,26 +3,27 @@
 Autohotkey scripts to make you more productive when using Windows.
 
 ## Bookmarks
+
 - http://daviddeley.com/autohotkey/xprxmp/autohotkey_expression_examples.htm
 - https://www.autohotkey.com/docs/AutoHotkey.htm
 
 ## Run script at statup
-1.
-open startup folder
-`Win+R` then `shell:startup`
-or
-`C:\Users\1gour\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
+
+1.  open startup folder
+    `Win+R` then `shell:startup`
+    or
+    `C:\Users\1gour\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
 
 then paste script as shortcut
 
 OR
 
-2.
-put `script_autorun_startup.vbs` at startup folder 
-
+2.  put `script_autorun_startup.vbs` at startup folder
 
 ### Run script as Admin
+
 1.
+
 ```
 ; check if it is running as Admin, if not reload as Admin. put at top
 if not A_IsAdmin
@@ -34,8 +35,7 @@ if not A_IsAdmin
 
 OR
 
-2.
-Check "run this program as administrator" in:
+2.  Check "run this program as administrator" in:
 
 > autohothey.exe > properties > compatability > settings
 

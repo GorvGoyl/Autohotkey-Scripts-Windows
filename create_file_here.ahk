@@ -10,10 +10,10 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance force
 
+
+; ctrl+shift+m: create empty text file in file explorer
+
 #IfWinActive ahk_class CabinetWClass
-^+p::
-    pwshHere()
-    return
 ^+m::
     newFileHere()
     return
@@ -35,20 +35,4 @@ if FileExist(file)
     return
 }
 FileAppend,, %file%  ; create new file
-}
-
-pwshHere(){
-If WinActive("ahk_class CabinetWClass") || WinActive("ahk_class ExploreWClass") {
-      If WinActive("ahk_class CabinetWClass") || WinActive("ahk_class ExploreWClass") {
-        WinHWND := WinActive()
-        For win in ComObjCreate("Shell.Application").Windows
-            If (win.HWND = WinHWND) {
-                dir := SubStr(win.LocationURL, 9) ; remove "file:///"
-                dir := RegExReplace(dir, "%20", " ")
-                Break
-            }
-    }
-    Run, pwsh, % dir ? dir : A_Desktop
-    }
-
 }
