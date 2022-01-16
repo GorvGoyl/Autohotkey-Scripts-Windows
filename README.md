@@ -1,7 +1,9 @@
 # Top [AutoHotkey](https://www.autohotkey.com) scripts to get more out of Windows
 
 Useful AutoHotkey scripts (Windows) for quick lookup, in-line calculator, remap keys, battery alert, and more.
-👇
+
+## Explanation
+
 http://gourav.io/blog/autohotkey-scripts-windows
 
 ## How to run script
