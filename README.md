@@ -8,9 +8,9 @@ https://www.autohotkey.com
 - Download a script (`*.ahk`) or copy paste script content in a text file and then rename it with `.ahk` extension e.g. `my-script.ahk`
 - Right-click -> `Run script`.  
   You can also run scripts by double-click, or do right-click ->`Open with` -> `AutoHotkey`
-- Bonus: you can right-click and `Compile script` to make it as a standalone `*.exe` program which would run without needing to install AutoHotkey first.
+- Bonus: you can right-click and `Compile script` to make it a standalone `*.exe` program which would run without needing to install AutoHotkey first.
 
-_scripts inside /drafts folder are not tested properly and might not work. Rest of the scripts should work fine._
+_scripts inside /drafts folder are not tested properly and might not work. The rest of the scripts should work fine._
 
 ### Run script at startup
 
@@ -24,11 +24,11 @@ OR
 
 Method 2:
 
-- Put `script_autorun_startup.vbs` at startup folder. Make sure to put correct path of your ahk scripts inside that file first.
+- Put `script_autorun_startup.vbs` at startup folder. Make sure to put the correct path of your ahk scripts inside that file first.
 
 ### Run script as Admin
 
-Put it at the beginning of script:
+Put it at the beginning of the script:
 
 ```
 ; check if it is running as Admin, if not reload as Admin. put at top
