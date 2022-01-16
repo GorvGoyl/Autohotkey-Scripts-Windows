@@ -1,6 +1,8 @@
-# Useful AutoHotkey Scripts for Windows
+# Top [AutoHotkey](https://www.autohotkey.com) scripts to get more out of Windows
 
-https://www.autohotkey.com
+Useful AutoHotkey scripts (Windows) for quick lookup, in-line calculator, remap keys, battery alert, and more.
+👇
+http://gourav.io/blog/autohotkey-scripts-windows
 
 ## How to run script
 
@@ -24,7 +26,7 @@ OR
 
 Method 2:
 
-- Put `script_autorun_startup.vbs` at startup folder. Make sure to put the correct path of your ahk scripts inside that file first.
+- Put `script_autorun_startup.vbs` at startup folder. Make sure to put the correct path of your ahk scripts in that file first.
 
 ### Run script as Admin
 
