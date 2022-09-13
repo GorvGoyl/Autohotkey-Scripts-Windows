@@ -1,4 +1,4 @@
-; alt + right-click: Move a window without activating it.
+; alt + left-click: Move a window without activating it.
 ;Skrommel @2006
 
 #SingleInstance,Force
